@@ -2,6 +2,7 @@
   "name": "app",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@material-ui/core": "^4.5.0",
     "@material-ui/styles": "^4.5.0",
@@ -18,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "archive": "(cd ./build && (rm build.zip || true) && zip -r build.zip . && mv build.zip ..)"
+    "archive": "npm run build && (rm build.zip || true) && (cd ./build && (rm build.zip || true) && zip -r build.zip . && mv build.zip ..) && open ."
   },
   "eslintConfig": {
     "extends": "react-app"
